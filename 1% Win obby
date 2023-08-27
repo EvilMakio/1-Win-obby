@@ -10,11 +10,11 @@ local Window = Rayfield:CreateWindow({
       FileName = "Evil Hub"
    },
    Discord = {
-      Enabled = true,
+      Enabled = false,
       Invite = "aVzzCtBvSU", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
-   KeySystem = true, -- Set this to true to use our key system
+   KeySystem = false, -- Set this to true to use our key system
    KeySettings = {
       Title = "EVIL",
       Subtitle = "Key System",
@@ -40,6 +40,21 @@ local Button = Tab:CreateButton({
    Callback = function()
    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").SpawnLocations.Lobby.CFrame
    end,
+})
+
+Rayfield:Notify({
+   Title = "Evil",
+   Content = "Evil",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Thank you, like and comment my scripts.",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
 })
 
 local Tab = Window:CreateTab("AutoFarm", 4483362458) -- Title, Image
