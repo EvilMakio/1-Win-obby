@@ -44,12 +44,12 @@ local Button = Tab:CreateButton({
 
 Rayfield:Notify({
    Title = "Evil",
-   Content = "Evil",
+   Content = "Thank you, like and comment my scripts.",
    Duration = 6.5,
    Image = 4483362458,
    Actions = { -- Notification Buttons
       Ignore = {
-         Name = "Thank you, like and comment my scripts.",
+         Name = "Okey",
          Callback = function()
          print("The user tapped Okay!")
       end
